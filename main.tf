@@ -37,7 +37,7 @@ resource "aws_eks_cluster" "main" {
 
 }
 
-resource "aws_iam_role" "main" {
+resource "aws_iam_role" "main_nodegroup" {
   name = "${var.env}-eks-node-group-role"
 
   assume_role_policy = jsonencode({
